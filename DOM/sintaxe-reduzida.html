@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>S Reduzida</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+        <!-- 
+            LEGENDA
+
+            @clik é a mesma coisa que v-on:clik
+            :value é a mesma coisa que v-bind:value
+        -->
+    <div id="app">
+            <p>{{contador}}</p>
+            <button @click="somar">Somar 1</button>
+            <hr>
+            <input type="text" :value="contador">
+    </div>
+    
+
+    <script>
+        
+        new Vue({
+            el:'#app',
+            data:{
+                contador:0
+            },
+            methods:{
+                somar(event){
+                    console.log(event)
+                    this.contador ++
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>
